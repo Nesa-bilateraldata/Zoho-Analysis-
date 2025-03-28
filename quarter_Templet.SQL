@@ -1,18 +1,18 @@
 CREATE VIEW weekly_amounts AS
 SELECT 
     category,
-    amount_per_week AS W13,
-    amount_per_week AS W14,
-    amount_per_week AS W15,
-    amount_per_week AS W16,
-    amount_per_week AS W17,
-    amount_per_week AS W18,
-    amount_per_week AS W19,
-    amount_per_week AS W20,
-    amount_per_week AS W21,
-    amount_per_week AS W22,
-    amount_per_week AS W23,
-    amount_per_week AS W24,
-    amount_per_week AS W25,
-      amount_per_week AS W26
+    amount_per_week AS 2025-13,
+    amount_per_week AS 2025-14,
+    amount_per_week AS 2025-15,
+    amount_per_week AS 2025-16,
+    amount_per_week AS 2025-17,
+    amount_per_week AS 2025-18,
+    amount_per_week AS 2025-19,
+    amount_per_week AS 2025-20,
+    amount_per_week AS 2025-21,
+    amount_per_week AS 2025-22,
+    amount_per_week AS 2025-23,
+    amount_per_week AS 2025-24,
+    amount_per_week AS 2025-25,
+    amount_per_week AS 2025-26
 FROM customers_Target_data;
