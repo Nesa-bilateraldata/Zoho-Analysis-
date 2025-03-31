@@ -1,19 +1,21 @@
-
-
-CREATE VIEW Target_vs_Commitment AS
 SELECT 
-    category, 
-    customer_id, 
-    Sales_Person_ID, 
-    quarter_year 
-     FROM weekly_sales_transformed
+    weekly_sales_transformed.category AS category,
+    weekly_sales_transformed.customer_id AS customer_id,
+    weekly_sales_transformed.Sales_Person_ID AS Sales_Person_ID,
+    weekly_sales_transformed.quarter_year AS quarter_year,
+    weekly_sales_transformed.week AS week,
+    weekly_sales_transformed.sales AS sales,
+    'Target' AS Report_Type 
+FROM DLService.weekly_sales_transformed 
 
-UNION ALL
-
+UNION ALL 
 
 SELECT 
-    category, 
-    customer_id, 
-    Sales_Person_ID, 
-    quarter_year 
- FROM weekly_sales_transformed
+    customers_Commitment_data.category AS category,
+    customers_Commitment_data.customer_id AS customer_id,
+    customers_Commitment_data.Sales_Person_ID AS Sales_Person_ID,
+    customers_Commitment_data.quarter_year AS quarter_year,
+    customers_Commitment_data.week_year AS week,  -- Renamed to match "week"
+    customers_Commitment_data.amount AS sales,   -- Renamed to match "sales"
+    'Commitment' AS Report_Type  
+FROM DLService.customers_Commitment_data;
