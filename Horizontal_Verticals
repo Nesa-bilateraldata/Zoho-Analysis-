@@ -1,0 +1,98 @@
+CREATE VIEW weekly_sales_transformed AS
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-13' AS week, `2025-13` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-14' AS week, `2025-14` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-15' AS week, `2025-15` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-16' AS week, `2025-16` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-17' AS week, `2025-17` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-18' AS week, `2025-18` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-19' AS week, `2025-19` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-20' AS week, `2025-20` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-21' AS week, `2025-21` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-22' AS week, `2025-22` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-23' AS week, `2025-23` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-24' AS week, `2025-24` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-25' AS week, `2025-25` AS sales FROM weekly_amounts
+UNION ALL
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year, 
+    '2025-26' AS week, `2025-26` AS sales FROM weekly_amounts;
