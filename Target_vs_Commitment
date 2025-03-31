@@ -1,0 +1,19 @@
+
+
+CREATE VIEW Target_vs_Commitment AS
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year 
+     FROM weekly_sales_transformed
+
+UNION ALL
+
+
+SELECT 
+    category, 
+    customer_id, 
+    Sales_Person_ID, 
+    quarter_year 
+ FROM weekly_sales_transformed
