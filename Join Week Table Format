@@ -1,0 +1,29 @@
+SELECT 
+    w.category,
+    w.customer_id,
+    w.customer_name,
+    w.Sales_Person_ID,
+    w.quantity,
+    w.amount,
+    COALESCE(CASE WHEN c.week_year = '2025-13' THEN c.amount ELSE w.`2025-13` END, w.`2025-13`) AS `2025-13`,
+    COALESCE(CASE WHEN c.week_year = '2025-14' THEN c.amount ELSE w.`2025-14` END, w.`2025-14`) AS `2025-14`,
+    COALESCE(CASE WHEN c.week_year = '2025-15' THEN c.amount ELSE w.`2025-15` END, w.`2025-15`) AS `2025-15`,
+    COALESCE(CASE WHEN c.week_year = '2025-16' THEN c.amount ELSE w.`2025-16` END, w.`2025-16`) AS `2025-16`,
+    COALESCE(CASE WHEN c.week_year = '2025-17' THEN c.amount ELSE w.`2025-17` END, w.`2025-17`) AS `2025-17`,
+    COALESCE(CASE WHEN c.week_year = '2025-18' THEN c.amount ELSE w.`2025-18` END, w.`2025-18`) AS `2025-18`,
+    COALESCE(CASE WHEN c.week_year = '2025-19' THEN c.amount ELSE w.`2025-19` END, w.`2025-19`) AS `2025-19`,
+    COALESCE(CASE WHEN c.week_year = '2025-20' THEN c.amount ELSE w.`2025-20` END, w.`2025-20`) AS `2025-20`,
+    COALESCE(CASE WHEN c.week_year = '2025-21' THEN c.amount ELSE w.`2025-21` END, w.`2025-21`) AS `2025-21`,
+    COALESCE(CASE WHEN c.week_year = '2025-22' THEN c.amount ELSE w.`2025-22` END, w.`2025-22`) AS `2025-22`,
+    COALESCE(CASE WHEN c.week_year = '2025-23' THEN c.amount ELSE w.`2025-23` END, w.`2025-23`) AS `2025-23`,
+    COALESCE(CASE WHEN c.week_year = '2025-24' THEN c.amount ELSE w.`2025-24` END, w.`2025-24`) AS `2025-24`,
+    COALESCE(CASE WHEN c.week_year = '2025-25' THEN c.amount ELSE w.`2025-25` END, w.`2025-25`) AS `2025-25`,
+    COALESCE(CASE WHEN c.week_year = '2025-26' THEN c.amount ELSE w.`2025-26` END, w.`2025-26`) AS `2025-26`,
+    w.Report_type
+FROM weekly_amounts AS w
+LEFT JOIN customers_Commitment_data AS c 
+ON w.customer_id = c.customer_id 
+AND w.category = c.category 
+AND w.Sales_Person_ID = c.Sales_Person_ID
+AND c.Report_type = 'commitment'
+WHERE w.Report_type = 'commitment';
