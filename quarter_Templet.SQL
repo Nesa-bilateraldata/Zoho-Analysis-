@@ -1,6 +1,8 @@
 CREATE VIEW weekly_amounts AS
 SELECT 
     category,
+    customer_id,
+Sales_Person_ID,
     amount_per_week AS 2025-13,
     amount_per_week AS 2025-14,
     amount_per_week AS 2025-15,
